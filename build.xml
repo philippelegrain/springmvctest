@@ -6,7 +6,7 @@
     <property name="src.dir" value="src"/>
     <property name="web.dir" value="war"/>
     <property name="build.dir" value="${web.dir}/WEB-INF/classes"/>
-    <property name="name" value="springapp"/>
+    <property name="name" value="springmvctest"/>
 
     <path id="master-classpath">
         <fileset dir="${web.dir}/WEB-INF/lib">
@@ -42,7 +42,7 @@
     <target name="build" description="Compile main source tree java files">
         <mkdir dir="${build.dir}"/>
         <javac destdir="${build.dir}" source="1.5" target="1.5" debug="true"
-               deprecation="false" optimize="false" failonerror="true">
+               deprecation="false" optimize="false" failonerror="true" includeantruntime="false">
             <src path="${src.dir}"/>
             <classpath refid="master-classpath"/>
         </javac>
