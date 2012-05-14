@@ -7,6 +7,6 @@
 
   <!-- the application context definition for the springapp DispatcherServlet -->
 
-  <bean name="/hello" class="net.mbs.web.HelloController"/>
+  <bean name="/hello.htm" class="net.mbs.web.HelloController"/>
   
 </beans>
