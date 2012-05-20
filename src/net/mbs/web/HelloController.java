@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.util.Date;
 
 public class HelloController implements Controller {
-	
+
 	public static String NOW_PARAM = "now";
 
     protected final Log logger = LogFactory.getLog(getClass());
@@ -23,6 +23,6 @@ public class HelloController implements Controller {
             throws ServletException, IOException {
         String now = (new Date()).toString();
         logger.info("Returning hello view with " + now);
-        return new ModelAndView("WEB-INF/jsp/hello.jsp",NOW_PARAM,now);
+        return new ModelAndView("hello",NOW_PARAM,now);
     }
 }
